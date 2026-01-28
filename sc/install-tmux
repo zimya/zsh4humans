@@ -8,7 +8,7 @@ if [ -n "${ZSH_VERSION:-}" ]; then
   emulate sh -o err_exit -o no_unset
 fi
 
-readonly url_base=https://github.com/romkatv/tmux-bin/releases/download/v3.1.0
+readonly url_base=https://proxy.melonhu.cn/https://github.com/romkatv/tmux-bin/releases/download/v3.1.0
 
 readonly archives='
 ---------------------

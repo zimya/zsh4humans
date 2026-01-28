@@ -52,9 +52,9 @@ Run this command in bash, zsh, or sh:
 
 ```shell
 if command -v curl >/dev/null 2>&1; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
+  sh -c "$(curl -fsSL https://proxy.melonhu.cn/https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
 else
-  sh -c "$(wget -O- https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
+  sh -c "$(wget -O- https://proxy.melonhu.cn/https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
 fi
 ```
 
@@ -80,14 +80,14 @@ changes to the file system. Once you exit Zsh, the image is deleted.
   ```zsh
   docker run -e TERM -e COLORTERM -e LC_ALL=C.UTF-8 -w /root -it --detach-keys="ctrl-^,ctrl-@" --rm alpine sh -uec '
     apk add zsh curl tmux
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"'
+    sh -c "$(curl -fsSL https://proxy.melonhu.cn/https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"'
   ```
 - **Ubuntu**: install additional software with `apt install <package>`:
   ```zsh
   docker run -e TERM -e COLORTERM -w /root -it --detach-keys="ctrl-^,ctrl-@" --rm ubuntu sh -uec '
     apt-get update
     apt-get install -y zsh curl tmux
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"'
+    sh -c "$(curl -fsSL https://proxy.melonhu.cn/https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"'
   ```
 
 ## Caveats
@@ -205,7 +205,7 @@ See [Powerlevel10k](https://github.com/romkatv/powerlevel10k) homepage for more 
 
 Different parts of Zsh for Humans UI are rendered by different projects.
 
-![Zsh for Humans](https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/prompt-highlight.png)
+![Zsh for Humans](https://proxy.melonhu.cn/https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/prompt-highlight.png)
 
 Everything within the highlighted areas on the screenshot is *prompt*. It is produced by
 [Powerlevel10k](https://github.com/romkatv/powerlevel10k). See

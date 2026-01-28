@@ -4,10 +4,10 @@ local url postinstall command
 
 if [[ $1 == */* ]]; then
   if [[ $1 == *@* ]]; then
-    url=https://github.com/${1%%@*}/archive/${1#*@}.tar.gz
+    url=https://proxy.melonhu.cn/https://github.com/${1%%@*}/archive/${1#*@}.tar.gz
     1=${1%%@*}
   else
-    url=https://github.com/$1/archive/master.tar.gz
+    url=https://proxy.melonhu.cn/https://github.com/$1/archive/master.tar.gz
   fi
   if ! zstyle -s :z4h:$1 postinstall postinstall; then
     case $1 in
@@ -41,20 +41,20 @@ else
     1-stable|1-testing)
       case $1 in
         tmux)                       command=$tmux_cmd;;
-        terminfo)                   url=https://github.com/romkatv/terminfo/archive/v1.4.0.tar.gz;;
-        *)                          url=https://github.com/zsh4humans/$1/archive/z4h-$channel[1].tar.gz;;
+        terminfo)                   url=https://proxy.melonhu.cn/https://github.com/romkatv/terminfo/archive/v1.4.0.tar.gz;;
+        *)                          url=https://proxy.melonhu.cn/https://github.com/zsh4humans/$1/archive/z4h-$channel[1].tar.gz;;
       esac
     ;;
     1-dev)
       case $1 in
-        fzf)                          url=https://github.com/junegunn/$1/archive/master.tar.gz;;
-        powerlevel10k)                url=https://github.com/romkatv/$1/archive/master.tar.gz;;
-        systemd)                      url=https://github.com/systemd/$1/archive/master.tar.gz;;
-        zsh-completions)              url=https://github.com/zsh-users/$1/archive/master.tar.gz;;
-        zsh-autosuggestions)          url=https://github.com/zsh-users/$1/archive/master.tar.gz;;
-        zsh-syntax-highlighting)      url=https://github.com/zsh-users/$1/archive/master.tar.gz;;
-        zsh-history-substring-search) url=https://github.com/zsh-users/$1/archive/master.tar.gz;;
-        terminfo)                     url=https://github.com/romkatv/terminfo/archive/v1.3.0.tar.gz;;
+        fzf)                          url=https://proxy.melonhu.cn/https://github.com/junegunn/$1/archive/master.tar.gz;;
+        powerlevel10k)                url=https://proxy.melonhu.cn/https://github.com/romkatv/$1/archive/master.tar.gz;;
+        systemd)                      url=https://proxy.melonhu.cn/https://github.com/systemd/$1/archive/master.tar.gz;;
+        zsh-completions)              url=https://proxy.melonhu.cn/https://github.com/zsh-users/$1/archive/master.tar.gz;;
+        zsh-autosuggestions)          url=https://proxy.melonhu.cn/https://github.com/zsh-users/$1/archive/master.tar.gz;;
+        zsh-syntax-highlighting)      url=https://proxy.melonhu.cn/https://github.com/zsh-users/$1/archive/master.tar.gz;;
+        zsh-history-substring-search) url=https://proxy.melonhu.cn/https://github.com/zsh-users/$1/archive/master.tar.gz;;
+        terminfo)                     url=https://proxy.melonhu.cn/https://github.com/romkatv/terminfo/archive/v1.3.0.tar.gz;;
         tmux)                         command=$tmux_cmd;;
         *)
           print -Pru2 -- "%F{3}z4h%f: %F{1}internal error%f: unknown package: ${1//\%/%%}"
