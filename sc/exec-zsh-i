@@ -39,7 +39,7 @@ _z4h_exec_zsh_i() {
     '[' '!' '-e' "$install" ']' || 'command' 'rm' '-rf' '--' "$install" || 'return'
   fi
 
-  'local' zsh_url='https://proxy.melonhu.cn/https://raw.githubusercontent.com/romkatv/zsh-bin/master/install'
+  'local' zsh_url='https://proxy.melonhu.cn/https://raw.githubusercontent.com/zimya/zsh-bin/master/install'
 
   (
     'local' 'err'
